@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Cache-Control",
+          "operation": "set",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "header": "Pragma",
+          "operation": "set",
+          "value": "no-cache"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*/components.json*",
+      "requestDomains": ["netacad.com"],
+      "resourceTypes": ["xmlhttprequest", "other"]
+    }
+  }
+]

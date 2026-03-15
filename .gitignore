@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if building later)
+node_modules/
+dist/
+package-lock.json
+
+# Build artifacts
+*.zip
+*.crx
+*.xpi
+
+# Logs
+*.log

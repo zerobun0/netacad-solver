@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "NetAcad Quiz Helper",
+  "version": "1.0.0",
+  "description": "Auto-complete Cisco NetAcad quizzes. Intercepts quiz answer data and auto-selects correct options. Supports all question types including MCQ, match, dropdown, fill-blanks, and more.",
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "webRequest",
+    "declarativeNetRequest"
+  ],
+
+  "host_permissions": [
+    "https://netacad.com/*",
+    "https://*.netacad.com/*",
+    "https://skillsforall.com/*",
+    "https://*.skillsforall.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://netacad.com/*",
+        "https://*.netacad.com/*",
+        "https://skillsforall.com/*",
+        "https://*.skillsforall.com/*"
+      ],
+      "js": ["domHelper.js", "content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "netacad_nocache",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

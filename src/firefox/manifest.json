@@ -1,0 +1,60 @@
+{
+  "manifest_version": 2,
+  "name": "NetAcad Quiz Helper",
+  "version": "1.0.0",
+  "description": "Auto-complete Cisco NetAcad quizzes. Intercepts quiz answer data and auto-selects correct options. Supports all question types including MCQ, match, dropdown, fill-blanks, and more.",
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "https://netacad.com/*",
+    "https://*.netacad.com/*",
+    "https://skillsforall.com/*",
+    "https://*.skillsforall.com/*"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://netacad.com/*",
+        "https://*.netacad.com/*",
+        "https://skillsforall.com/*",
+        "https://*.skillsforall.com/*"
+      ],
+      "js": ["domHelper.js", "content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "netacad-quiz-helper@extension",
+      "strict_min_version": "109.0"
+    }
+  }
+}
