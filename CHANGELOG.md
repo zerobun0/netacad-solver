@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.1 - 2026-03-16
+
+### Fixed
+- Restored missing content DOM helper module required by production build.
+- Verified release build pipeline is healthy and outputs complete extension assets.
+
 ## v0.1.0 - 2026-03-16
 
 ### Added
