@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.0.1 - 2026-03-16
+
+### Added
+- Popup with a working Tip me button linked to Ko-fi.
+- Quick popup status indicator for active NetAcad page detection.
+
+### Improved
+- More reliable popup behavior using an external popup script.
+- Safer background message delivery with bounded retries.
+- Content-script stability improvements with safer question detection and guards.
+
+### Fixed
+- Restored the missing content DOM helper module required by production builds.
+- Verified the release build pipeline outputs complete extension assets.
+
 ## v0.1.1 - 2026-03-16
 
 ### Fixed

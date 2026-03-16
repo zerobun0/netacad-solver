@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Call Tarek",
   "description": "Extension allowing you to solve even the hardest NetAcad quizzes",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "icons": {
     "16": "icon-16.png",
     "32": "icon-32.png",
