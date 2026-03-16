@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Call Tarek</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #111111;
+      --card: #1b1b1b;
+      --text: #ffffff;
+      --muted: #c6c6c6;
+      --accent: #ff5f5f;
+      --accent-hover: #ff4646;
+    }
+
+    body {
+      margin: 0;
+      width: 280px;
+      background: radial-gradient(circle at top left, #242424 0%, var(--bg) 55%);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .wrap {
+      padding: 16px;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .tip-btn {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(180deg, var(--accent) 0%, #df2f2f 100%);
+      cursor: pointer;
+      transition: transform 0.12s ease, background 0.12s ease;
+    }
+
+    .tip-btn:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(180deg, var(--accent-hover) 0%, #c81f1f 100%);
+    }
+
+    .tip-btn:active {
+      transform: translateY(0);
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #666;
+      transition: background 0.12s ease;
+      flex: 0 0 auto;
+    }
+
+    .dot.ok {
+      background: #45d483;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Call Tarek</h1>
+    <div class="status" id="statusWrap">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">Checking status...</span>
+    </div>
+    <p>If this extension helped you, you can support me with a tip.</p>
+    <button id="tipBtn" class="tip-btn" type="button">Tip me!</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
